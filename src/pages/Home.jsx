@@ -1,7 +1,8 @@
 import React from 'react';
+import IssueList from '../components/issueList/IssueList';
 
 const Home = () => {
-  return <div>Home</div>;
+  return <IssueList />;
 };
 
 export default Home;
