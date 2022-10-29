@@ -12,11 +12,6 @@ export const ListContextProvider = ({ children }) => {
     setPage(prev => prev - 1);
   };
 
-  useEffect(() => {
-    getIssueList(page) //
-      .then(data => setIssues(data));
-  }, []);
-
   const value = useMemo(
     () => ({ issues, setIssues, incrementPage, decrementPage }),
     []

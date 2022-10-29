@@ -1,10 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import S from './styles';
 import { ListContext } from '../../context/ListContext';
-import IssueItem from '../IssueItem/IssueItem';
+import IssueItem from '../issueItem/IssueItem';
+import getIssueList from '../../utils/issueService';
 
 const IssueList = () => {
-  const { issues } = useContext(ListContext);
+  const [issues, setIssues] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    getIssueList() //
+      .then(data => {
+        setIssues(prev => data);
+      });
+  }, []);
 
   return (
     <S.Layout>
