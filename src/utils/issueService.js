@@ -1,10 +1,12 @@
-const getIssueList = async (page = 1) => {
+const getIssueList = async page => {
+  console.log(process.env.REACT_APP_GITHUB_TOKEN);
   const response = await fetch(
-    `https://api.github.com/repos/angular/angular-cli/issues?sort=comments&per_page=30&page=${page}`,
+    `https://api.github.com/repos/angular/angular-cli/issues?sort=comments&per_page=8&page=${page}`,
     {
       method: 'GET',
-      header: {
-        Authorization: process.env.REACT_APP_TOKEN,
+      headers: {
+        Authorization:
+          'token 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',
       },
     }
   );
