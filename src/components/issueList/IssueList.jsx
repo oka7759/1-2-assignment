@@ -5,17 +5,8 @@ import IssueItem from '../issueItem/IssueItem';
 import getIssueList from '../../utils/issueService';
 import AdBox from '../adBox/AdBox';
 
-const IssueList = () => {
-  const [issues, setIssues] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [page, setpage] = useState(1);
-  useEffect(() => {
-    getIssueList() //
-      .then(data => {
-        setIssues(prev => data);
-      });
-  }, []);
-
+const IssueList = ({ issues, page }) => {
+  console.log(issues);
   return (
     <S.Layout>
       <S.List>

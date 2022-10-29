@@ -28,7 +28,7 @@ const LeftBox = styled.div`
 
 const RightBox = styled.div`
   flex: 20%;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 `;
 
 const S = {

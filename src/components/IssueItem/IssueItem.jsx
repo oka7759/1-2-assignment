@@ -5,10 +5,9 @@ import S from './styles';
 
 const IssueItem = ({ id, number, title, user, created_at, comments }) => {
   const navigate = useNavigate();
-  const { login } = user;
   const date = formDate(created_at);
   const handleClick = () => {
-    navigate(`/${id})`);
+    navigate(`/${id}`);
   };
   return (
     <S.List onClick={handleClick}>
@@ -18,7 +17,7 @@ const IssueItem = ({ id, number, title, user, created_at, comments }) => {
           <h1>{title}</h1>
         </header>
         <div>
-          <span>{`작성자: ${login}`}</span>
+          <span>{`작성자: ${user && user.login}`}</span>
           <span>{date}</span>
         </div>
       </S.LeftBox>
