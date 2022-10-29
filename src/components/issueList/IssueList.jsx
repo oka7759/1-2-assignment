@@ -1,20 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react';
 import S from './styles';
-import { ListContext } from '../../context/ListContext';
 import IssueItem from '../issueItem/IssueItem';
-import getIssueList from '../../utils/issueService';
 import AdBox from '../adBox/AdBox';
+import useFetch from '../../hooks/useFetch';
 
 const IssueList = () => {
-  const { issues, setIssues } = useContext(ListContext);
-  const [isLoading, setIsLoading] = useState(true);
-  const [page, setpage] = useState(1);
-  useEffect(() => {
-    getIssueList() //
-      .then(data => {
-        setIssues(data);
-      });
-  }, []);
+  const [page, setPage] = useState(1);
+  const [isLoading, error, issues] = useFetch(page);
+  const observerOption = {
+    root: null,
+    rootMargin: '20px',
+    threshold: 0.5,
+  };
+  const observationCallback = () => {};
+  const observer = new IntersectionObserver(
+    observationCallback,
+    observerOption
+  );
 
   return (
     <S.Layout>
