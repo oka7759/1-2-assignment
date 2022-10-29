@@ -4,7 +4,7 @@ import getIssueList from '../utils/issueService';
 
 const useFetch = () => {
   const { issues, setIssues, page } = useContext(ListContext);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
   useEffect(() => {
     setIsLoading(true);
