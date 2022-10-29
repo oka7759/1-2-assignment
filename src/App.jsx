@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
-import { ListContextProvider } from './context/ListContext';
+import React from 'react';
 import Router from './Router';
 
 const App = () => {
-  return (
-    <ListContextProvider>
-      <Router />
-    </ListContextProvider>
-  );
+  return <Router />;
 };
 
 export default App;
