@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState, createContext } from 'react';
-import getIssueList from '../utils/issueService';
+import { useMemo, useState, createContext } from 'react';
 
 export const ListContext = createContext();
 export const ListContextProvider = ({ children }) => {

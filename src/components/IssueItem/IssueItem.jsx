@@ -1,16 +1,19 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import formDate from '../../utils/formDate';
 import S from './styles';
 
 const IssueItem = ({ id, number, title, user, created_at, comments }) => {
   const navigate = useNavigate();
+  const params = useParams();
   const date = formDate(created_at);
   const handleClick = () => {
-    navigate(`/${id}`);
+    if (!params.id) {
+      navigate(`/${id}`);
+    }
   };
   return (
-    <S.List onClick={handleClick}>
+    <S.List onClick={handleClick} params={!!params.id}>
       <S.LeftBox>
         <header>
           <span>{`#${number}`}</span>

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 const Layout = styled.section`
   padding: 1em;
-  max-width: 50%;
+  max-width: 70%;
   margin: auto;
+  height: 100%;
   h1 {
     margin: 0;
     font-size: 1rem;
@@ -11,13 +12,16 @@ const Layout = styled.section`
   code {
     padding: 0.2em 0.5em;
     border-radius: 0.5em;
-    background-color: lightgray;
+    font-weight: bold;
+    background-color: #eeeeee;
+    line-height: 2;
   }
   pre {
     border-radius: 0.5em;
     padding: 1em;
-    background-color: lightgray;
+    background-color: #eeeeee;
     color: black;
+    line-height: 1.5;
   }
 `;
 
