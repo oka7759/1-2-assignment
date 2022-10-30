@@ -43,7 +43,7 @@ npm install
 
 ### 배포 링크
 
-  [배포링크 바로가기](www.naver.com)
+[배포링크 바로가기](www.naver.com)
 
 <br/>
 <br/>
@@ -119,4 +119,4 @@ organization name 과 repository name이 포함된 헤더가 모든 페이지의
 
 ### 📝 Meeting Log
 
-    [회의록 바로가기](https://www.notion.so/Meeting-log-3eff6566fd844052b7a98702ebab8c5b?p=1e14e81a8e4a4deda8d067c61beb76ab&pm=s)
+[회의록 바로가기](https://www.notion.so/Meeting-log-3eff6566fd844052b7a98702ebab8c5b?p=1e14e81a8e4a4deda8d067c61beb76ab&pm=s)
