@@ -110,7 +110,7 @@ npm install
 1.  공통헤더
 
 ```
-organization name 과 repository name이 포함된 헤더가 모든 페이지의 상단에 위치해 있도록 구현
+- organization name 과 repository name이 포함된 헤더가 모든 페이지의 상단에 위치해 있도록 구현
 ```
 
 2.  GitHub 이슈 목록 화면
