@@ -221,7 +221,7 @@ $ npm start
 
 ## ✨ 주요 기능
 
-<img width="700" src="https://user-images.githubusercontent.com/107469939/198880508-5759e1c0-4491-465a-9067-4120ff96f232.JPG"/>
+<img width="500" src="https://user-images.githubusercontent.com/107469939/198880508-5759e1c0-4491-465a-9067-4120ff96f232.JPG"/>
 
 
 1. 이슈 목록 화면
