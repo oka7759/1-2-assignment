@@ -134,51 +134,97 @@ organization name 과 repository name이 포함된 헤더가 모든 페이지의
 
 <br/>
 
-1. 다섯번째 셀에는 광고 이미지 출력
-   <details>
-     <summary>Code 더보기</summary>
-     
-     ```js
-       <React.Fragment key={`${issue.id}${issueIdx}`}>
-            <Link to={`/issue/${issue.number}`}>
-              <IssueItem issue={issue} />
-            </Link>
-            {issueIdx === 4 && (
-              <ImageBox>
-                <img
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Flogo_wanted_black.png&w=110&q=100"
-                  alt="banner"
-                />
-              </ImageBox>
-            )}
-          </React.Fragment>
+1.  다섯번째 셀에는 광고 이미지 출력
+    <details>
+      <summary>Code 더보기</summary>
       
-     ```
+      ```js
+        <React.Fragment key={`${issue.id}${issueIdx}`}>
+             <Link to={`/issue/${issue.number}`}>
+               <IssueItem issue={issue} />
+             </Link>
+             {issueIdx === 4 && (
+               <ImageBox>
+                 <img
+                   src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Flogo_wanted_black.png&w=110&q=100"
+                   alt="banner"
+                 />
+               </ImageBox>
+             )}
+           </React.Fragment>       
+      ```
 
-     </details>
-     <br/>
+      </details>
+      <br/>
 
-2. 화면을 아래로 스크롤 할 시 이슈 목록 추가 로딩(인피니티 스크롤)
-   <details>
-     <summary>Code 더보기</summary>
-     
-     ```js
-         ssss
-     ```
+2.  화면을 아래로 스크롤 할 시 이슈 목록 추가 로딩(인피니티 스크롤)
+     <details>
+       <summary>Code 더보기</summary>
 
-     </details>
-     <br/>
+    ```js
+    useEffect(() => {
+      const isEnabledAPICall = !issuesState.data;
+      if (isEnabledAPICall) getIssues(0, dispatch);
+    }, []);
 
-3. Octokit 사용하여 이슈 목록 가져오기 API 활용
-   <details>
-     <summary>Code 더보기</summary>
-     
-     ```js
-     sss
-     ```
+    const onIntersect = useCallback(
+      async ([entry], observer) => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          await getIssues(issuesState.nextPage, dispatch);
+          observer.observe(entry.target);
+        }
+      },
+      [issuesState.nextPage, dispatch]
+    );
 
-     </details>
-     <br/>
+    useEffect(() => {
+      const isNotEndPage = issuesState.nextPage !== 0;
+      const isEnabledObserver =
+        observerRef?.current && isNotEndPage && !issuesState.isLoading;
+
+      let io;
+      const observerBoundary = observerRef?.current;
+
+      if (isEnabledObserver) {
+        io = new IntersectionObserver(onIntersect, { threshold: 1 });
+        io.observe(observerBoundary);
+      }
+
+      return () => io && io.disconnect();
+    }, [issuesState.isLoading, issuesState.nextPage, onIntersect]);
+    ```
+
+    </details>
+    <br/>
+
+3.  Octokit 사용하여 이슈 목록 가져오기 API 활용
+    <details>
+      <summary>Code 더보기</summary>
+
+    ```js
+    import { Octokit } from 'octokit';
+
+    const octokit = new Octokit({
+      auth: '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',
+    });
+
+    export const getIssuesAPI = async (page = 0) =>
+      await octokit
+        .request(`GET /repos/angular/angular-cli/issues`, {
+          sort: 'comments',
+          page,
+        })
+        .then(res => res.data);
+
+    export const getIssueAPI = async issueNumber =>
+      await octokit
+        .request(`GET /repos/angular/angular-cli/issues/${issueNumber}`, {})
+        .then(res => res.data);
+    ```
+
+      </details>
+      <br/>
 
 ### 📝 Meeting Log
 
