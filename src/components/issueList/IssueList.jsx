@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext } from 'react';
 import S from './styles';
 import IssueItem from '../issueItem/IssueItem';
 import AdBox from '../adBox/AdBox';
 import useFetch from '../../hooks/useFetch';
 import useObservation from '../../hooks/useObservation';
 import { ListContext } from '../../context/ListContext';
-
 import Loader from '../loader/Loader';
-import ErrorContent from '../errorContent/ErrorContent';
 
 const IssueList = () => {
   const { setNextPage } = useContext(ListContext);
@@ -40,7 +38,11 @@ const IssueList = () => {
           })}
         {isLoading && <Loader />}
       </S.List>
-      <S.Target ref={targetRef} />
+      {lastPage ? (
+        <S.Target ref={targetRef} />
+      ) : (
+        <S.Banner>마지막 페이지입니다🎈</S.Banner>
+      )}
     </>
   );
 };
