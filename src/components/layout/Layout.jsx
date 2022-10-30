@@ -5,7 +5,7 @@ import S from './styles';
 const Layout = ({ children, isError }) => {
   return (
     <S.Layout>
-      {isError && <Header />}
+      {!isError && <Header />}
       {children}
     </S.Layout>
   );

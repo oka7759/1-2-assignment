@@ -10,7 +10,6 @@ import Loader from '../loader/Loader';
 const IssueList = () => {
   const { setNextPage } = useContext(ListContext);
   const [isLoading, error, issues, lastPage] = useFetch();
-
   const onObserve = (entry, observer) => {
     observer.unobserve(entry.target);
     if (!isLoading && !lastPage) {
@@ -38,7 +37,7 @@ const IssueList = () => {
           })}
         {isLoading && <Loader />}
       </S.List>
-      {lastPage ? (
+      {!lastPage ? (
         <S.Target ref={targetRef} />
       ) : (
         <S.Banner>마지막 페이지입니다🎈</S.Banner>

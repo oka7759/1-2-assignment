@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import S from './styles';
 import formatDate from '../../utils/formatDate';
@@ -32,4 +32,4 @@ const IssueItem = ({ id, number, title, user, created_at, comments }) => {
   );
 };
 
-export default IssueItem;
+export default memo(IssueItem);
