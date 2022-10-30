@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 import IssueContent from '../components/issueContent/IssueContent';
+import Loader from '../components/loader/Loader';
 import { ListContext } from '../context/ListContext';
+import useFetch from '../hooks/useFetch';
 
 const Detail = () => {
-  const { id } = useParams();
-  const { issues } = useContext(ListContext);
-  return <IssueContent issue={issues[id]} />;
+  return <IssueContent />;
 };
 
 export default Detail;

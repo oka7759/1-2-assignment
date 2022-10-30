@@ -15,5 +15,10 @@ const Header = styled.header`
   }
 `;
 
-const S = { Header };
+const ContentBox = styled.main`
+  display: flex;
+  flex-direction: column;
+`;
+
+const S = { Header, ContentBox };
 export default S;

@@ -5,7 +5,8 @@ const Layout = styled.section`
   max-width: 70%;
   margin: auto;
   height: 100%;
-
+  display: flex;
+  flex-direction: column;
   h1 {
     margin: 0;
     font-size: 1rem;
