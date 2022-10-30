@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router';
-import formDate from '../../utils/formDate';
 import S from './styles';
+import formatDate from '../../utils/formatDate';
 
 const IssueItem = ({ id, number, title, user, created_at, comments }) => {
   const navigate = useNavigate();
   const params = useParams();
-  const date = formDate(created_at);
+  const date = formatDate(created_at);
   const handleClick = () => {
     if (!params.id) {
       navigate(`/${id}`);
