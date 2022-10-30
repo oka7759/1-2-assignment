@@ -206,7 +206,7 @@ organization name 과 repository name이 포함된 헤더가 모든 페이지의
     import { Octokit } from 'octokit';
 
     const octokit = new Octokit({
-      auth: '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',
+      auth: process.env.REACT_APP_GITHUB_TOKEN,
     });
 
     export const getIssuesAPI = async (page = 0) =>
