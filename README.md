@@ -221,7 +221,7 @@ $ npm start
 
 ## ✨ 주요 기능
 
-<img width="500" src="https://user-images.githubusercontent.com/107469939/198880508-5759e1c0-4491-465a-9067-4120ff96f232.JPG"/>
+<img width="500" src="https://user-images.githubusercontent.com/107469939/198880685-1069d460-fc6d-4192-9d05-7c6e7bba2cb0.JPG"/>
 
 
 1. 이슈 목록 화면
@@ -234,6 +234,8 @@ $ npm start
 - 에러 화면 구현
 - 반응형 웹 구현
 - 공통 헤더 공유
+
+<img width="500" src="https://user-images.githubusercontent.com/107469939/198880655-01bff986-14c0-4096-922c-cc572e704580.JPG"/>
 
 
 2. 이슈 상세 화면
@@ -249,7 +251,7 @@ $ npm start
 </br>
 
 
-<img width="700" src=""/>
+
 
 
 
