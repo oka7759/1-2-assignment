@@ -43,7 +43,7 @@ npm install
 
 ### 배포 링크
 
-[배포링크 바로가기]
+  [배포링크 바로가기](www.naver.com)
 
 <br/>
 <br/>
@@ -90,13 +90,13 @@ npm install
 
 ### ⚙️ 구현기능
 
- 1. 공통헤더
+1.  공통헤더
 
 ```
 organization name 과 repository name이 포함된 헤더가 모든 페이지의 상단에 위치해 있도록 구현
 ```
 
- 2. GitHub 이슈 목록 화면
+2.  GitHub 이슈 목록 화면
 
 ```
 - 데이터 찾지 못할 시 Error Page 구현
@@ -105,7 +105,7 @@ organization name 과 repository name이 포함된 헤더가 모든 페이지의
 - GitHub 이슈 목록 open 상태일 때 코멘트가 많은 순으로 정렬
 ```
 
- 3. Github 이슈 상세 화면
+3.  Github 이슈 상세 화면
 
 ```
 - 이슈 상세 내용 표시 - 이슈 번호, 이슈 제목, 작성자, 작성일, 코멘트 수 표시
@@ -117,6 +117,6 @@ organization name 과 repository name이 포함된 헤더가 모든 페이지의
 
 <br/>
 
-### Meeting Log
+### 📝 Meeting Log
 
-[회의록 바로가기](https://www.notion.so/Meeting-log-3eff6566fd844052b7a98702ebab8c5b?p=1e14e81a8e4a4deda8d067c61beb76ab&pm=s)
+    [회의록 바로가기](https://www.notion.so/Meeting-log-3eff6566fd844052b7a98702ebab8c5b?p=1e14e81a8e4a4deda8d067c61beb76ab&pm=s)
