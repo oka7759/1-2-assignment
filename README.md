@@ -254,11 +254,22 @@ $ npm start
 
 
 
+- 반응형 
+<img src="https://user-images.githubusercontent.com/93697790/198881136-64855524-44ba-4715-96ca-8af369315e1b.gif"
+width="600px">
 
 
+- Detail 페이지에서 Home으로 가기
+<img src="https://user-images.githubusercontent.com/93697790/198881230-e3652277-8aef-4c47-a323-fd1dd48cc40a.gif"
+width="600px">
 
+- 404 페이지
+<img src="https://user-images.githubusercontent.com/93697790/198881263-e41a5046-1c6a-43d4-be62-dd7f21b1df36.gif"
+width="600px">
 
-
+- notFound 페이지 
+<img src="https://user-images.githubusercontent.com/93697790/198881342-b03ad0e7-086a-48bd-a90a-c6cd595b1a3d.gif"
+width="600px">
 
 
 
