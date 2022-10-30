@@ -1,7 +1,6 @@
 import HTTPError from '../network/httpError';
 
 const getIssueList = async page => {
-  console.log(process.env.REACT_APP_TOKEN);
   const response = await fetch(
     `https://api.github.com/repos/angular/angular-cli/issues?sort=comments&per_page=30&page=${page}`,
     {

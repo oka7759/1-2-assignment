@@ -7,11 +7,8 @@ const Layout = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
-  h1 {
-    margin: 0;
-    font-size: 1rem;
-  }
-  code {
+
+  /* code {
     padding: 0.2em 0.5em;
     border-radius: 0.5em;
     font-weight: bold;
@@ -24,7 +21,7 @@ const Layout = styled.section`
     background-color: #eeeeee;
     color: black;
     line-height: 1.5;
-  }
+  } */
 `;
 
 export default Layout;

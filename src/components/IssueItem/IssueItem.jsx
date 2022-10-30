@@ -9,7 +9,7 @@ const IssueItem = ({ id, number, title, user, created_at, comments }) => {
   const date = formDate(created_at);
   const handleClick = () => {
     if (!params.id) {
-      navigate(`/issue/${id}`);
+      navigate(`/${id}`);
     }
   };
   return (
@@ -17,7 +17,7 @@ const IssueItem = ({ id, number, title, user, created_at, comments }) => {
       <S.LeftBox>
         <header>
           <span>{`#${number}`}</span>
-          <h1>{title}</h1>
+          <S.Title>{title}</S.Title>
         </header>
         <div>
           <span>{`작성자: ${user && user.login}`}</span>

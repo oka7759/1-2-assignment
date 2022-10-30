@@ -16,7 +16,7 @@ const IssueList = () => {
   const option = {
     root: null,
     rootMargin: '0px',
-    threshold: 1,
+    threshold: 0.8,
   };
   const observationCallback = entries => {
     entries.forEach(entry => {
