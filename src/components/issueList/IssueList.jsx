@@ -11,11 +11,11 @@ import ErrorContent from '../errorContent/ErrorContent';
 
 const IssueList = () => {
   const { setNextPage } = useContext(ListContext);
-  const [isLoading, error, issues] = useFetch();
+  const [isLoading, error, issues, lastPage] = useFetch();
 
   const onObserve = (entry, observer) => {
     observer.unobserve(entry.target);
-    if (!isLoading) {
+    if (!isLoading && !lastPage) {
       setNextPage();
     }
   };

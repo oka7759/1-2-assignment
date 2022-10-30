@@ -5,7 +5,7 @@ export default class HTTPError extends Error {
     this.statusCode = statusCode;
   }
 
-  get codeToErrorMessage() {
+  get errorMessage() {
     switch (this.statusCode) {
       case 404:
         this.message = '해당 레포를 찾을 수 없습니다.';

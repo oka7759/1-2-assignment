@@ -18,6 +18,7 @@ const Spinner = styled.div`
   border-top: 0.6em solid lightblue;
   animation: ${spin} 1.5s infinite;
 `;
+
 const Loader = styled.div`
   align-self: center;
   text-align: center;

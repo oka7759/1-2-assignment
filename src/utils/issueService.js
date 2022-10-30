@@ -6,8 +6,7 @@ const getIssueList = async page => {
     {
       method: 'GET',
       headers: {
-        Authorization:
-          'token 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',
+        Authorization: `token ${process.env.REACT_APP_TOKEN}`,
       },
     }
   );
