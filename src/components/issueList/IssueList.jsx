@@ -12,25 +12,15 @@ import ErrorContent from '../errorContent/ErrorContent';
 const IssueList = () => {
   const { setNextPage } = useContext(ListContext);
   const [isLoading, error, issues] = useFetch();
-  const targetRef = useRef(null);
-  const option = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.8,
+
+  const onObserve = (entry, observer) => {
+    observer.unobserve(entry.target);
+    if (!isLoading) {
+      setNextPage();
+    }
   };
-  const observationCallback = entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !isLoading) {
-        setNextPage();
-      }
-    });
-  };
-  useEffect(() => {
-    if (!targetRef.current) return;
-    const observer = new IntersectionObserver(observationCallback, option);
-    observer.observe(targetRef.current);
-    return () => observer.disconnect();
-  });
+
+  const targetRef = useObservation(onObserve);
 
   if (error) {
     return (
