@@ -1,5 +1,5 @@
-# 원티드 프리온보딩 프론트엔드 - Week 1-2 
-	
+# 원티드 프리온보딩 프론트엔드 - Week 1-2
+
 ## 10팀 맴버 구성
 
 <br/>
@@ -12,9 +12,9 @@
 |                [:globe_with_meridians:silviaoh](https://github.com/silviaoh)                 |                 [:globe_with_meridians:oka7759](https://github.com/oka7759)                  |            [:globe_with_meridians:natural-nine](https://github.com/natural-nine)           |                  [:globe_with_meridians:kimitt](https://github.com/kimitt)                  |
 
 | <img src="https://avatars.githubusercontent.com/u/83964261?v=4" width="130" height="130" /> | <img src="https://avatars.githubusercontent.com/u/103277726?v=4" width="130" height="130" /> | <img src="https://avatars.githubusercontent.com/u/93189402?v=4"  width="130" height="130" /> | <img src="https://avatars.githubusercontent.com/u/109638284?v=4" width="130" height="130"/> |
-| :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------:  | :------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------:  |
-|                                           이학성                                             |                                           김숙영                                             |                                            김인표                                             |                                           박민규                                             |
-|             [:globe_with_meridians:Hakseong-Lee](https://github.com/Hakseong-Lee)           |                [:globe_with_meridians:Maiowol](https://github.com/Maiowol)                   |                    [:globe_with_meridians:kiminpyo](https://github.com/kiminpyo)             |             [:globe_with_meridians:kyle970320](https://github.com/kyle970320)               |
+| :-----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
+|                                           이학성                                            |                                            김숙영                                            |                                            김인표                                            |                                           박민규                                            |
+|            [:globe_with_meridians:Hakseong-Lee](https://github.com/Hakseong-Lee)            |                 [:globe_with_meridians:Maiowol](https://github.com/Maiowol)                  |                [:globe_with_meridians:kiminpyo](https://github.com/kiminpyo)                 |              [:globe_with_meridians:kyle970320](https://github.com/kyle970320)              |
 
 </div>
 
@@ -39,31 +39,31 @@
 
 ### 💻 실행 방법
 
- 1. src상단에 .env 파일을 생성합니다.
+1.  src상단에 .env 파일을 생성합니다.
 
 ```javascript
   REACT_APP_TOKEN={사용자의 토큰을 입력}
 ```
 
- 2. 라이브러리를 설치합니다.
+2.  라이브러리를 설치합니다.
 
 ```
 npm install
 ```
 
- 3. 프로젝트를 실행합니다.
+3.  프로젝트를 실행합니다.
 
 ```
  npm start
 ```
 
-<br/> 
+<br/>
 
 ### 배포 링크
 
 [배포링크 바로가기](www.naver.com)
 
-<br/> 
+<br/>
 
 ## 프로젝트 설명
 
@@ -133,6 +133,52 @@ organization name 과 repository name이 포함된 헤더가 모든 페이지의
 ### 10팀의 Best Practice 선정 내용
 
 <br/>
+
+1. 다섯번째 셀에는 광고 이미지 출력
+   <details>
+     <summary>Code 더보기</summary>
+     
+     ```js
+       <React.Fragment key={`${issue.id}${issueIdx}`}>
+            <Link to={`/issue/${issue.number}`}>
+              <IssueItem issue={issue} />
+            </Link>
+            {issueIdx === 4 && (
+              <ImageBox>
+                <img
+                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Flogo_wanted_black.png&w=110&q=100"
+                  alt="banner"
+                />
+              </ImageBox>
+            )}
+          </React.Fragment>
+      
+     ```
+
+     </details>
+     <br/>
+
+2. 화면을 아래로 스크롤 할 시 이슈 목록 추가 로딩(인피니티 스크롤)
+   <details>
+     <summary>Code 더보기</summary>
+     
+     ```js
+         ssss
+     ```
+
+     </details>
+     <br/>
+
+3. Octokit 사용하여 이슈 목록 가져오기 API 활용
+   <details>
+     <summary>Code 더보기</summary>
+     
+     ```js
+     sss
+     ```
+
+     </details>
+     <br/>
 
 ### 📝 Meeting Log
 
