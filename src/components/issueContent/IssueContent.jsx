@@ -4,20 +4,18 @@ import remarkGfm from 'remark-gfm';
 import { useParams } from 'react-router';
 import S from './styles';
 import IssueItem from '../issueItem/IssueItem';
-import Layout from '../../styles/Layout';
 import Loader from '../loader/Loader';
 import useFetch from '../../hooks/useFetch';
 import ErrorContent from '../errorContent/ErrorContent';
 import markdownSetting from '../../utils/markdownSetting';
+import Layout from '../layout/Layout';
 
 const IssueContent = () => {
   const { id } = useParams();
   const [isLoading, error, issues] = useFetch();
   const issue = issues[id];
   const avatar_url = issue?.user.avatar_url;
-  if (!issue) {
-    return <ErrorContent />;
-  }
+
   if (isLoading) {
     return (
       <Layout>
@@ -25,9 +23,11 @@ const IssueContent = () => {
       </Layout>
     );
   }
-
+  if (!issue) {
+    return <ErrorContent type={!issue} />;
+  }
   return (
-    <Layout>
+    <Layout isError={!issue}>
       <S.Header>
         <img src={avatar_url} alt="avatar" />
         <IssueItem {...issue} />

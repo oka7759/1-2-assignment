@@ -9,7 +9,7 @@ const IssueItem = ({ id, number, title, user, created_at, comments }) => {
   const date = formatDate(created_at);
   const handleClick = () => {
     if (!params.id) {
-      navigate(`/${id}`);
+      navigate(`/detail/${id}`);
     }
   };
   return (

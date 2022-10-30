@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Layout from '../../styles/Layout';
 
 const List = styled.ul`
   margin-bottom: 10rem;
@@ -12,7 +11,6 @@ const Target = styled.div`
 `;
 
 const S = {
-  Layout,
   List,
   Target,
 };

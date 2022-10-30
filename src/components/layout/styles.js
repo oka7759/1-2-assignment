@@ -9,4 +9,8 @@ const Layout = styled.section`
   flex-direction: column;
 `;
 
-export default Layout;
+const S = {
+  Layout,
+};
+
+export default S;

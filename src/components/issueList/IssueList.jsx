@@ -22,15 +22,8 @@ const IssueList = () => {
 
   const targetRef = useObservation(onObserve);
 
-  if (error) {
-    return (
-      <S.Layout>
-        <ErrorContent text={error} />
-      </S.Layout>
-    );
-  }
   return (
-    <S.Layout>
+    <>
       <S.List>
         {Object.values(issues)
           .sort((a, b) => b.comments - a.comments)
@@ -47,9 +40,8 @@ const IssueList = () => {
           })}
         {isLoading && <Loader />}
       </S.List>
-
       <S.Target ref={targetRef} />
-    </S.Layout>
+    </>
   );
 };
 
