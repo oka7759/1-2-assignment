@@ -3,7 +3,6 @@ import Home from './pages/Home';
 import Detail from './pages/Detail';
 import Header from './components/header/Header';
 import { ListContextProvider } from './context/ListContext';
-import NotFound from './pages/NotFound';
 
 const Router = () => {
   return (
@@ -13,7 +12,6 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:id" element={<Detail />} />
-          <Route path="/*" element={<NotFound />} />
         </Routes>
       </ListContextProvider>
     </BrowserRouter>

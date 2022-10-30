@@ -18,7 +18,9 @@ const useFetch = () => {
           return updated;
         });
       })
-      .catch(e => setError(e))
+      .catch(e => {
+        setError(e.codeToErrorMessage);
+      })
       .finally(() => setIsLoading(false));
   }, [page]);
 

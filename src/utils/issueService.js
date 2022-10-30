@@ -1,7 +1,8 @@
+import HTTPError from '../network/httpError';
+
 const getIssueList = async page => {
-  console.log(process.env.REACT_APP_GITHUB_TOKEN);
   const response = await fetch(
-    `https://api.github.com/repos/angular/angular-cli/issues?sort=comments&per_page=30&page=${page}`,
+    `https://api.github.com/repos/angular/angular-aaacli/issues?sort=comments&per_page=30&page=${page}`,
     {
       method: 'GET',
       headers: {
@@ -10,8 +11,12 @@ const getIssueList = async page => {
       },
     }
   );
-  const data = await response.json();
-  return data;
+  if (!response.ok) {
+    throw new HTTPError(response.status, response.statusText);
+  } else {
+    const data = await response.json();
+    return data;
+  }
 };
 
 export default getIssueList;

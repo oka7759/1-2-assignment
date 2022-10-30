@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router';
 import S from './styles';
 import IssueItem from '../issueItem/IssueItem';
 import AdBox from '../adBox/AdBox';
@@ -7,9 +8,11 @@ import useObservation from '../../hooks/useObservation';
 import { ListContext } from '../../context/ListContext';
 
 import Loader from '../loader/Loader';
+import ErrorContent from '../errorContent/ErrorContent';
 
 const IssueList = () => {
   const { setNextPage } = useContext(ListContext);
+  const navigate = useNavigate();
   const [isLoading, error, issues] = useFetch();
   const targetRef = useRef(null);
   const option = {
@@ -31,6 +34,13 @@ const IssueList = () => {
     return () => observer.disconnect();
   });
 
+  if (error) {
+    return (
+      <S.Layout>
+        <ErrorContent text={error} />
+      </S.Layout>
+    );
+  }
   return (
     <S.Layout>
       <S.List>
