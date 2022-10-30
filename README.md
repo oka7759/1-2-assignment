@@ -17,7 +17,7 @@
 
 ## 실행 방법
 
-1. src상단에 .env 파일을 생성합니다.
+⌨️1. src상단에 .env 파일을 생성합니다.
 
 ```javascript
   REACT_APP_TOKEN={사용자의 토큰을 입력}
@@ -41,7 +41,37 @@ npm install
 
 ## 📦 디렉토리 구조
 
--
+<details>
+<summary> 구조</summary>
+<div markdown="1">
+```
+🗂 src
+ ┣ 📁 actions
+	 ┣ issue.js
+	 ┣ issues.js
+   ┗ types.js
+ ┣ 📁 components
+ ┣ 📁 api
+	 ┣ index.js
+ ┣ 📂 context
+	 ┣ IssueContext.js
+	 ┣ IssuesContext.js
+   ┗ IssuesContext.jsx
+ ┣ 📂 pages
+   ┣ Error404Pages.jsx
+   ┣ Issues.jsx
+   ┗ Issue.jsx
+ ┣ 📂 hoc
+   ┣ withCheckPageState.jsx
+ ┣ 📂 hooks
+   ┣ useGetContextState.js
+ ┣ 📂 styles
+   ┣ GlobalStyle.jsx
+   ┗ common.js
+ ┣ App.js
+ ┣ index.js
+ ┗ router.js
+ ```
 
 ## ✏️ 개선 부분
 
