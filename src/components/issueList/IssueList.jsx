@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router';
 import S from './styles';
 import IssueItem from '../issueItem/IssueItem';
 import AdBox from '../adBox/AdBox';
@@ -12,7 +11,6 @@ import ErrorContent from '../errorContent/ErrorContent';
 
 const IssueList = () => {
   const { setNextPage } = useContext(ListContext);
-  const navigate = useNavigate();
   const [isLoading, error, issues] = useFetch();
   const targetRef = useRef(null);
   const option = {
@@ -49,10 +47,10 @@ const IssueList = () => {
           .map((issue, idx) => {
             if (idx === 4) {
               return (
-                <>
+                <div key={issue.id}>
                   <AdBox />
-                  <IssueItem key={issue.id} {...issue} />
-                </>
+                  <IssueItem {...issue} />
+                </div>
               );
             }
             return <IssueItem key={issue.id} {...issue} />;
