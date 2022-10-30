@@ -234,6 +234,8 @@ $ npm start
 - 에러 화면 구현
 - 반응형 웹 구현
 - 공통 헤더 공유
+</br>
+
 
 <img width="500" src="https://user-images.githubusercontent.com/107469939/198880655-01bff986-14c0-4096-922c-cc572e704580.JPG"/>
 
