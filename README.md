@@ -248,28 +248,46 @@ $ npm start
 - 반응형 웹 구현
 - 공통 헤더 공유
 
-
-
 </br>
 
+3. 기능 데모 영상 
 
+- 페이지 이동
+<img src="https://user-images.githubusercontent.com/93697790/198881444-74b5b296-3daf-463e-85b9-3a03c032b0a3.gif"
+width="600px">
+</br>
 
-- 반응형 
+- 메인 페이지 반응형
+<img src="https://user-images.githubusercontent.com/93697790/198881506-9a40a5d4-73b9-43b5-81ee-73d34b8a8b77.gif"
+width="600px">
+<br>
+
+- 무한스크롤 기능 구현
+<img src="https://user-images.githubusercontent.com/93697790/198881566-fd562e4b-5eb4-4587-b8f2-eeecf25cc93f.gif"
+width="600px">
+<br>
+
+- 디테일 페이지 반응형 
 <img src="https://user-images.githubusercontent.com/93697790/198881136-64855524-44ba-4715-96ca-8af369315e1b.gif"
 width="600px">
-
+<br>
 
 - Detail 페이지에서 Home으로 가기
 <img src="https://user-images.githubusercontent.com/93697790/198881230-e3652277-8aef-4c47-a323-fd1dd48cc40a.gif"
 width="600px">
+<br>
 
 - 404 페이지
 <img src="https://user-images.githubusercontent.com/93697790/198881263-e41a5046-1c6a-43d4-be62-dd7f21b1df36.gif"
 width="600px">
+<br>
 
 - notFound 페이지 
 <img src="https://user-images.githubusercontent.com/93697790/198881342-b03ad0e7-086a-48bd-a90a-c6cd595b1a3d.gif"
 width="600px">
+<br>
+
+
 
 
 
